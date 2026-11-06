@@ -21,3 +21,9 @@
     --tx: #161a33;
     --mut: #5f678c;
 }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
