@@ -79,3 +79,8 @@ button {
     border-right: 1px solid var(--line);
     transition: margin .3s;
 }
+
+.app.collapsed .side,
+.app.focus .side {
+    margin-left: -290px;
+}
