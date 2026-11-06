@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Chat Bot</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,33 +12,33 @@
     <div class="app" id="app">
         <aside class="side" id="side">
             <div class="brand"><span class="mark"></span><b>Chat Bot</b><button class="icon" id="collapse"
-                    title="collapse sidebar"></button></div>
-
-            <button class="primary" id="new-chat">+ New Chat</button>
-
-            <input class="search" id="search" placeholder="Search conversations" aria-label="Search conversations">
-
+                    title="Collapse sidebar">«</button></div>
+            <button class="primary" id="newChat">+ New chat</button>
+            <input class="search" id="search" placeholder="Search conversations" aria- label="Search conversations">
             <div class="scroll">
                 <h4>Favorites</h4>
-                    <div id="favs"></div>
+                <div id="favs"></div>
                 <h4>Recent</h4>
-                    <div id="recent"></div>
+                <div id="recent"></div>
                 <h4>Explore tools</h4>
-                    <div id="tools" class="tools"></div>
+                <div id="tools" class="tools"></div>
                 <h4>Insights</h4>
-                    <div id="insights" class="insights"></div>
+                <div id="insights" class="insights"></div>
             </div>
-
             <div class="foot">
-                <button class="row" id="openSetting">⚙️ Settings</button>
-
-                <div class="profile"><span class="avater">You</span><>Guestworkspace<small id="modeTag"></small></span>
-                </div>
+                <button class="row" id="openSettings">⚙ Settings</button>
+                <div class="profile"><span class="avatar">You</span><span>Guest
+                        workspace<small id="modeTag"></small></span></div>
             </div>
-
         </aside>
-    </div>
-
-</body>
-
-</html>
+        <main class="main">
+            <header class="top">
+                <button class="icon" id="expand" title="Show sidebar">☰</button>
+                <span id="title" class="ttl">New chat</span>
+                <span class="spacer"></span>
+                <select id="persona" aria-label="Personality mode"></select>
+                <button class="icon" id="focus" title="Focus mode">◎</button>
+                <button class="icon" id="theme" title="Toggle theme">◐</button>
+                <button class="icon" id="export" title="Export as TXT">⇩</button>
+                <button class="icon" id="clear" title="Clear conversation">⌫</button>
+            </header>
