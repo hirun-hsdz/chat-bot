@@ -1,0 +1,15 @@
+:root {
+    --bg: #070b1c;
+    --bg2: #0c1226;
+    --surf: rgba(22, 27, 46, .72);
+    --line: rgba(160, 170, 255, .14);
+    --tx: #e8ebff;
+    --mut: #8b93b8;
+    --vi: #8b5cf6;
+    --cy: #22d3ee;
+    --glass: blur(18px);
+    --r: 16px;
+
+    font-family: "Sora", "Segoe UI", system-ui, sans-serif;
+}
+

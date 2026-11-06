@@ -50,7 +50,8 @@
                 <div class="composer">
                     <button class="icon" id="attach" title="Attach a text file">⎘</button>
                     <input type="file" id="file" accept=".txt,.md,.js,.py,.html,.css,.json,.csv" hidden>
-                    <textarea id="input" rows="1" maxlength="4000" placeholder="Message Chat Bot… (Enter to send, Shift+Enter for new line)"></textarea>
+                    <textarea id="input" rows="1" maxlength="4000"
+                        placeholder="Message Chat Bot… (Enter to send, Shift+Enter for new line)"></textarea>
                     <button class="icon" id="clearInput" title="Clear input">✕</button>
                     <span class="count" id="count">0/4000</span>
                     <button class="send" id="send" title="Send">➤</button>
@@ -59,4 +60,20 @@
             </footer>
         </main>
     </div>
-    
+    <div class="modal" id="modal" hidden>
+        <div class="card">
+            <h3>Settings</h3>
+            <label>API endpoint (your own backend proxy)
+                <input id="endpoint" placeholder="https://your-server.example/api/chat"></label>
+            <p class="muted">Never put private API keys in this file. Point to a server that
+                holds the key and returns <code>{"reply": "..."}</code>. Leave empty for demo
+                mode.</p>
+            <div class="btns"><button id="wipe" class="danger">Clear all
+                    history</button><span class="spacer"></span><button id="closeSettings" class="primary">Done</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
