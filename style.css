@@ -101,3 +101,6 @@ button {
     box-shadow: 0 0 14px rgba(139, 92, 246, .6);
 }
 
+.brand .icon {
+    margin-left: auto;
+}
