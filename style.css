@@ -13,3 +13,11 @@
     font-family: "Sora", "Segoe UI", system-ui, sans-serif;
 }
 
+[data-theme="light"] {
+    --bg: #eef1fb;
+    --bg2: #e3e8f8;
+    --surf: rgba(255, 255, 255, .78);
+    --line: rgba(80, 90, 160, .18);
+    --tx: #161a33;
+    --mut: #5f678c;
+}
