@@ -84,3 +84,11 @@ button {
 .app.focus .side {
     margin-left: -290px;
 }
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.05rem;
+    letter-spacing: .04em;
+}
