@@ -67,3 +67,15 @@ button {
     outline-offset: 2px;
 }
 
+.side {
+    width: 290px;
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px;
+    background: var(--surf);
+    backdrop-filter: var(--glass);
+    border-right: 1px solid var(--line);
+    transition: margin .3s;
+}
