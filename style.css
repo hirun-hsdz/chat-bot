@@ -104,3 +104,11 @@ button {
 .brand .icon {
     margin-left: auto;
 }
+
+.icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    color: var(--mut);
+    transition: .2s;
+}
