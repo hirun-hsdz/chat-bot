@@ -117,3 +117,12 @@ button {
     background: var(--line);
     color: var(--tx);
 }
+
+.primary {
+    background: linear-gradient(135deg, var(--vi), #5b8cf6 60%, var(--cy));
+    color: #fff;
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-weight: 600;
+    box-shadow: 0 6px 20px rgba(139, 92, 246, .3);
+}
