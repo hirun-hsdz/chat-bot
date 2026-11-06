@@ -42,3 +42,21 @@
                 <button class="icon" id="export" title="Export as TXT">⇩</button>
                 <button class="icon" id="clear" title="Clear conversation">⌫</button>
             </header>
+            <div class="notice" id="notice">DEMO MODE: replies are simulated. Add an API
+                endpoint in Settings to connect a real AI.</div>
+            <section class="stream" id="stream" aria-live="polite"></section>
+            <footer class="dock">
+                <div class="chips" id="quick"></div>
+                <div class="composer">
+                    <button class="icon" id="attach" title="Attach a text file">⎘</button>
+                    <input type="file" id="file" accept=".txt,.md,.js,.py,.html,.css,.json,.csv" hidden>
+                    <textarea id="input" rows="1" maxlength="4000" placeholder="Message Chat Bot… (Enter to send, Shift+Enter for new line)"></textarea>
+                    <button class="icon" id="clearInput" title="Clear input">✕</button>
+                    <span class="count" id="count">0/4000</span>
+                    <button class="send" id="send" title="Send">➤</button>
+                </div>
+                <small class="hint">Ctrl+K new chat · Ctrl+/ focus input · Esc stop</small>
+            </footer>
+        </main>
+    </div>
+    
