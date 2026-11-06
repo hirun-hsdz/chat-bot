@@ -44,3 +44,9 @@ textarea {
     font: inherit;
     color: inherit;
 }
+
+button {
+    cursor: pointer;
+    background: none;
+    border: 0;
+}
