@@ -27,3 +27,13 @@
     margin: 0;
 }
 
+body {
+    background:
+        radial-gradient(900px 500px at 85% -10%, rgba(139, 92, 246, .22), transparent),
+        radial-gradient(700px 500px at 0 110%, rgba(34, 211, 238, .14), transparent),
+        var(--bg);
+    color: var(--tx);
+    height: 100vh;
+    overflow: hidden;
+}
+
