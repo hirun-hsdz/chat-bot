@@ -92,3 +92,12 @@ button {
     font-size: 1.05rem;
     letter-spacing: .04em;
 }
+
+.mark {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: conic-gradient(from 200deg, var(--vi), var(--cy), var(--vi));
+    box-shadow: 0 0 14px rgba(139, 92, 246, .6);
+}
+
