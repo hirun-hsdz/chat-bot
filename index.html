@@ -1,79 +1,209 @@
+
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 
 <head>
+    <link rel="icon" href="data:,">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Chat Bot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My chat AI - Your AI Assistant</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="app" id="app">
-        <aside class="side" id="side">
-            <div class="brand"><span class="mark"></span><b>Chat Bot</b><button class="icon" id="collapse"
-                    title="Collapse sidebar">«</button></div>
-            <button class="primary" id="newChat">+ New chat</button>
-            <input class="search" id="search" placeholder="Search conversations" aria- label="Search conversations">
-            <div class="scroll">
-                <h4>Favorites</h4>
-                <div id="favs"></div>
-                <h4>Recent</h4>
-                <div id="recent"></div>
-                <h4>Explore tools</h4>
-                <div id="tools" class="tools"></div>
-                <h4>Insights</h4>
-                <div id="insights" class="insights"></div>
-            </div>
-            <div class="foot">
-                <button class="row" id="openSettings">⚙ Settings</button>
-                <div class="profile"><span class="avatar">You</span><span>Guest
-                        workspace<small id="modeTag"></small></span></div>
-            </div>
-        </aside>
-        <main class="main">
-            <header class="top">
-                <button class="icon" id="expand" title="Show sidebar">☰</button>
-                <span id="title" class="ttl">New chat</span>
-                <span class="spacer"></span>
-                <select id="persona" aria-label="Personality mode"></select>
-                <button class="icon" id="focus" title="Focus mode">◎</button>
-                <button class="icon" id="theme" title="Toggle theme">◐</button>
-                <button class="icon" id="export" title="Export as TXT">⇩</button>
-                <button class="icon" id="clear" title="Clear conversation">⌫</button>
-            </header>
-            <div class="notice" id="notice">DEMO MODE: replies are simulated. Add an API
-                endpoint in Settings to connect a real AI.</div>
-            <section class="stream" id="stream" aria-live="polite"></section>
-            <footer class="dock">
-                <div class="chips" id="quick"></div>
-                <div class="composer">
-                    <button class="icon" id="attach" title="Attach a text file">⎘</button>
-                    <input type="file" id="file" accept=".txt,.md,.js,.py,.html,.css,.json,.csv" hidden>
-                    <textarea id="input" rows="1" maxlength="4000"
-                        placeholder="Message Chat Bot… (Enter to send, Shift+Enter for new line)"></textarea>
-                    <button class="icon" id="clearInput" title="Clear input">✕</button>
-                    <span class="count" id="count">0/4000</span>
-                    <button class="send" id="send" title="Send">➤</button>
-                </div>
-                <small class="hint">Ctrl+K new chat · Ctrl+/ focus input · Esc stop</small>
-            </footer>
-        </main>
-    </div>
-    <div class="modal" id="modal" hidden>
-        <div class="card">
-            <h3>Settings</h3>
-            <label>API endpoint (your own backend proxy)
-                <input id="endpoint" placeholder="https://your-server.example/api/chat"></label>
-            <p class="muted">Never put private API keys in this file. Point to a server that
-                holds the key and returns <code>{"reply": "..."}</code>. Leave empty for demo
-                mode.</p>
-            <div class="btns"><button id="wipe" class="danger">Clear all
-                    history</button><span class="spacer"></span><button id="closeSettings" class="primary">Done</button>
-            </div>
-        </div>
-    </div>
-    <script src="script.js"></script>
-</body>
 
+    <div class="app-container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="sidebar-top">
+
+                <div class="brand">
+                    <div class="brand-icon">✦</div>
+                    <span>Gemini AI</span>
+                </div>
+
+                <button class="new-chat-btn" id="newChat">
+                    <span>＋</span>
+                    New Chat
+                </button>
+
+                <div class="sidebar-section">
+                    <p class="section-title">YOUR ASSISTANT</p>
+
+                    <div class="sidebar-item active">
+                        <span>✧</span>
+                        AI Assistant
+                    </div>
+
+                    <div class="sidebar-item">
+                        <span>◷</span>
+                        Recent Chats
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="sidebar-bottom">
+
+                <div class="sidebar-profile">
+                    <div class="profile-avatar">G</div>
+
+                    <div class="profile-info">
+                        <h4>Gemini User</h4>
+                        <p>Personal Assistant</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- HEADER -->
+            <header class="top-header">
+
+                <div class="header-left">
+
+                    <div class="mobile-brand">
+                        <div class="brand-icon">✦</div>
+                        <span>Gemini AI</span>
+                    </div>
+
+                    <div class="model-selector">
+                        Gemini 3.8 Flash
+                        <span class="model-arrow">⌄</span>
+                    </div>
+
+                </div>
+
+                <div class="header-right">
+
+                    <div class="status">
+                        <span class="status-dot"></span>
+                        AI Ready
+                    </div>
+
+                    <button class="icon-btn" id="clearChat" title="Clear Chat">
+                        <span>♲</span>
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <!-- CHAT AREA -->
+            <section class="chat-area" id="chatBox">
+
+                <!-- WELCOME SCREEN -->
+                <div class="welcome" id="welcome">
+
+                    <div class="welcome-icon">✦</div>
+
+                    <p class="welcome-small">YOUR AI ASSISTANT</p>
+
+                    <h1>
+                        Hello, <span>there.</span>
+                    </h1>
+
+                    <p class="welcome-description">
+                        How can I help you today?
+                        Ask me anything, explore ideas, or learn something new.
+                    </p>
+
+
+                    <!-- SUGGESTIONS -->
+                    <div class="suggestions">
+
+                        <button class="suggestion-card">
+                            <span class="suggestion-icon">💻</span>
+                            <span class="suggestion-title">Write Code</span>
+                            <span class="suggestion-description">
+                                Help me write a Java program
+                            </span>
+                        </button>
+
+                        <button class="suggestion-card">
+                            <span class="suggestion-icon">📚</span>
+                            <span class="suggestion-title">Learn Something</span>
+                            <span class="suggestion-description">
+                                Explain a difficult topic
+                            </span>
+                        </button>
+
+                        <button class="suggestion-card">
+                            <span class="suggestion-icon">💡</span>
+                            <span class="suggestion-title">Get Ideas</span>
+                            <span class="suggestion-description">
+                                Give me creative project ideas
+                            </span>
+                        </button>
+
+                        <button class="suggestion-card">
+                            <span class="suggestion-icon">✍️</span>
+                            <span class="suggestion-title">Write Content</span>
+                            <span class="suggestion-description">
+                                Help me write something
+                            </span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- MESSAGE INPUT AREA -->
+            <footer class="input-area">
+
+                <div class="input-wrapper">
+
+                    <textarea
+                        id="messageInput"
+                        placeholder="Message Gemini..."
+                        rows="1"
+                    ></textarea>
+
+                    <div class="input-bottom">
+
+                        <div class="input-hint">
+                            <span>✦</span>
+                            Ask anything
+                        </div>
+
+                        <button id="sendButton" class="send-btn" title="Send Message">
+                            <span>↑</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <p class="footer-disclaimer">
+                    Gemini AI can make mistakes. Check important information.
+                </p>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
 </html>
