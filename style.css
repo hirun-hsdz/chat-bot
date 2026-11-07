@@ -164,3 +164,30 @@ h4 {
     cursor: pointer;
     font-size: .9rem;
 }
+
+.item:hover,
+.item.on {
+    background: var(--line);
+}
+
+.item.on {
+    box-shadow: inset 2px 0 var(--cy);
+}
+
+.item span {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.item button {
+    opacity: 0;
+    color: var(--mut);
+    padding: 2px 4px;
+}
+
+.item:hover button,
+.item button:focus-visible {
+    opacity: 1;
+}
