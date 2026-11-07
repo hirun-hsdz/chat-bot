@@ -154,3 +154,13 @@ h4 {
     font-weight: 600;
     margin: 14px 6px 6px;
 }
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: .9rem;
+}
