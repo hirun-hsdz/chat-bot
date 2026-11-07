@@ -191,3 +191,27 @@ h4 {
 .item button:focus-visible {
     opacity: 1;
 }
+
+.tools {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+}
+
+.tools button,
+.chips button {
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-size: .8rem;
+    color: var(--mut);
+    transition: .2s;
+}
+
+.tools button:hover,
+.chips button:hover {
+    border-color: var(--cy);
+    color: var(--tx);
+    background: rgba(34, 211, 238, .08);
+}
+
