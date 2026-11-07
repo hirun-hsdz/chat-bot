@@ -147,3 +147,10 @@ select {
     display: flex;
     flex-direction: column;
 }
+
+h4 {
+    font-size: .75rem;
+    color: var(--mut);
+    font-weight: 600;
+    margin: 14px 6px 6px;
+}
