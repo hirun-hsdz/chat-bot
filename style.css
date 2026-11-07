@@ -136,3 +136,7 @@ select,
     padding: 9px 12px;
     width: 100%;
 }
+
+select {
+    width: auto;
+}
