@@ -126,3 +126,13 @@ button {
     font-weight: 600;
     box-shadow: 0 6px 20px rgba(139, 92, 246, .3);
 }
+
+.search,
+select,
+.card input {
+    background: var(--bg2);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 9px 12px;
+    width: 100%;
+}
