@@ -215,3 +215,16 @@ h4 {
     background: rgba(34, 211, 238, .08);
 }
 
+.insights {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    font-size: .78rem;
+    color: var(--mut);
+}
+
+.insights b {
+    display: block;
+    font-size: 1.2rem;
+    color: var(--tx);
+}
